@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>SprocketMP.Core</AssemblyName>
+    <RootNamespace>SprocketMP</RootNamespace>
+    <DefineConstants>$(DefineConstants);LITENETLIB_UNSAFE</DefineConstants>
+    <Version>1.0.0</Version>
+    <NoWarn>$(NoWarn);CS0618;CS0649;CS0168;CS0219;CS8632;CS0162;CS0414</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(GameDir)/BepInEx/interop/*.dll" Private="false" />
+  </ItemGroup>
+</Project>

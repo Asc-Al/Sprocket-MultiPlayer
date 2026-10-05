@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup><AssemblyName>SprocketMP</AssemblyName></PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(GameDir)/BepInEx/interop/UnityEngine*.dll;$(GameDir)/BepInEx/interop/Il2Cppmscorlib.dll;$(GameDir)/BepInEx/interop/Unity.InputSystem.dll" Private="false" />
+  </ItemGroup>
+</Project>

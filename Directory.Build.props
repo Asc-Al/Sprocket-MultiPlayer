@@ -1,0 +1,23 @@
+<Project>
+  <PropertyGroup>
+    <GameDir Condition="'$(GameDir)' == ''">C:\Program Files (x86)\Steam\steamapps\common\Sprocket</GameDir>
+    <TargetFramework>net6.0</TargetFramework>
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+    <DisableImplicitNuGetFallbackFolder>true</DisableImplicitNuGetFallbackFolder>
+    <GenerateDependencyFile>false</GenerateDependencyFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <DebugType>embedded</DebugType>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <NoWarn>$(NoWarn);CS1701;CS1702;MSB3277;CS0436</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="$(GameDir)/dotnet/System.*.dll" Exclude="$(GameDir)/dotnet/System.Private.*.dll;$(GameDir)/dotnet/System.IO.Compression.Native.dll;$(GameDir)/dotnet/System.Security.Cryptography.Native*.dll" Private="false" />
+    <Reference Include="$(GameDir)/dotnet/System.Private.CoreLib.dll" Private="false" />
+    <Reference Include="$(GameDir)/dotnet/mscorlib.dll;$(GameDir)/dotnet/netstandard.dll;$(GameDir)/dotnet/Microsoft.Win32.Primitives.dll" Private="false" />
+    <Reference Include="$(GameDir)/BepInEx/core/BepInEx.Core.dll;$(GameDir)/BepInEx/core/BepInEx.Preloader.Core.dll;$(GameDir)/BepInEx/core/BepInEx.Unity.IL2CPP.dll;$(GameDir)/BepInEx/core/BepInEx.Unity.Common.dll;$(GameDir)/BepInEx/core/0Harmony.dll;$(GameDir)/BepInEx/core/Il2CppInterop.Runtime.dll;$(GameDir)/BepInEx/core/Il2CppInterop.Common.dll;$(GameDir)/BepInEx/core/Il2CppInterop.HarmonySupport.dll;$(GameDir)/BepInEx/core/SemanticVersioning.dll;$(GameDir)/BepInEx/core/Mono.Cecil.dll;$(GameDir)/BepInEx/core/Iced.dll" Private="false" />
+    <Reference Include="$(GameDir)/dotnet/Microsoft.Extensions.Logging.Abstractions.dll" Private="false" Condition="Exists('$(GameDir)/dotnet/Microsoft.Extensions.Logging.Abstractions.dll')" />
+  </ItemGroup>
+</Project>
